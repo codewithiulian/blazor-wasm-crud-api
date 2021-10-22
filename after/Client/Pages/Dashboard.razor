@@ -1,0 +1,122 @@
+﻿@page "/dashboard"
+@inject HttpClient HttpClient
+@using CoffeePicker.Shared
+
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+        <div class="row">
+            <div class="col"><h3>Coffees</h3></div>
+            <div class="col">
+                <button type="button" class="btn btn-info float-right" @onclick="ShowCreate">Create</button>
+            </div>
+        </div>
+
+        <div class="row">
+            @if (Coffees.Any())
+            {
+                @foreach (var coffee in Coffees)
+                {
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 mh-25 mb-4">
+                        <div class="card @(SelectedCoffee?.Id == coffee.Id ? "bg-light" : "")">
+                            <div class="card-body">
+                                <h5 class="card-title">#@coffee.Id @coffee.Title</h5>
+                                <p class="card-text">@coffee.Description.Substring(0, 80) ...</p>
+                                <a href="/dashboard" @onclick="() => GetDetails(coffee.Id)">More...</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No coffees available</p>
+            }
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        @if (SelectedCoffee is not null)
+        {
+        <EditForm class="container" Model="SelectedCoffee" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <InputText id="title" @bind-Value="SelectedCoffee.Title" placeholder="Coffee title..." class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <InputTextArea id="description" @bind-Value="SelectedCoffee.Description" placeholder="Description..." class="form-control" rows="7" />
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>
+                <div class="col">
+                    <button type="button" @onclick="DeleteCoffee" class="btn btn-danger float-right">Delete</button>
+                </div>
+            </div>
+        </EditForm>
+        }
+        else
+        {
+            <p>No coffee selected</p>
+        }
+    </div>
+</div>
+
+@code {
+    private List<Coffee> Coffees = new();
+    private Coffee SelectedCoffee;
+    private bool IsCreating;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Coffees = await GetCoffees();
+    }
+
+    async Task GetDetails(int id)
+    {
+        SelectedCoffee = new();
+        SelectedCoffee = await HttpClient.GetFromJsonAsync<Coffee>($"Coffee/{id}");
+    }
+
+    async Task HandleValidSubmit()
+    {
+        HttpResponseMessage response;
+
+        if (IsCreating)
+        {
+            response = await HttpClient.PostAsJsonAsync<Coffee>("Coffee", SelectedCoffee);
+        }
+        else
+        {
+            response = await HttpClient.PutAsJsonAsync<Coffee>("Coffee", SelectedCoffee);
+        }
+
+        if (response.IsSuccessStatusCode)
+        {
+            SelectedCoffee = await response.Content.ReadFromJsonAsync<Coffee>();
+        }
+    }
+
+    async Task DeleteCoffee()
+    {
+        var response = HttpClient.DeleteAsync($"Coffee/{SelectedCoffee.Id}");
+    }
+
+    async Task<List<Coffee>> GetCoffees()
+    {
+        return await HttpClient.GetFromJsonAsync<List<Coffee>>("Coffee/List");
+    }
+
+    void ShowCreate()
+    {
+        SelectedCoffee = new();
+        IsCreating = true;
+    }
+
+}

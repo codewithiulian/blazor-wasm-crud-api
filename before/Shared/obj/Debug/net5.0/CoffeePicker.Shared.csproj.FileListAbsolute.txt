@@ -1,0 +1,12 @@
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\bin\Debug\net5.0\CoffeePicker.Shared.deps.json
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\bin\Debug\net5.0\CoffeePicker.Shared.dll
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\bin\Debug\net5.0\ref\CoffeePicker.Shared.dll
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\bin\Debug\net5.0\CoffeePicker.Shared.pdb
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\obj\Debug\net5.0\CoffeePicker.Shared.csproj.AssemblyReference.cache
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\obj\Debug\net5.0\CoffeePicker.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\obj\Debug\net5.0\CoffeePicker.Shared.AssemblyInfoInputs.cache
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\obj\Debug\net5.0\CoffeePicker.Shared.AssemblyInfo.cs
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\obj\Debug\net5.0\CoffeePicker.Shared.csproj.CoreCompileInputs.cache
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\obj\Debug\net5.0\CoffeePicker.Shared.dll
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\obj\Debug\net5.0\ref\CoffeePicker.Shared.dll
+D:\Projects\Code with Julian\2021\43. API Controller Blazor Webassembly\Project\tutorial\CoffeePicker\Shared\obj\Debug\net5.0\CoffeePicker.Shared.pdb

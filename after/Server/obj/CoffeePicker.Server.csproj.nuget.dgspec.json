@@ -1,0 +1,219 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Server\\CoffeePicker.Server.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Client\\CoffeePicker.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Client\\CoffeePicker.Client.csproj",
+        "projectName": "CoffeePicker.Client",
+        "projectPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Client\\CoffeePicker.Client.csproj",
+        "packagesPath": "C:\\Users\\iulianoana\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\iulianoana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.org/api/v2": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Shared\\CoffeePicker.Shared.csproj": {
+                "projectPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Shared\\CoffeePicker.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
+              "version": "[5.0.11, 5.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Server\\CoffeePicker.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Server\\CoffeePicker.Server.csproj",
+        "projectName": "CoffeePicker.Server",
+        "projectPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Server\\CoffeePicker.Server.csproj",
+        "packagesPath": "C:\\Users\\iulianoana\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\iulianoana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.org/api/v2": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Client\\CoffeePicker.Client.csproj": {
+                "projectPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Client\\CoffeePicker.Client.csproj"
+              },
+              "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Shared\\CoffeePicker.Shared.csproj": {
+                "projectPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Shared\\CoffeePicker.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Shared\\CoffeePicker.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Shared\\CoffeePicker.Shared.csproj",
+        "projectName": "CoffeePicker.Shared",
+        "projectPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Shared\\CoffeePicker.Shared.csproj",
+        "packagesPath": "C:\\Users\\iulianoana\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Code with Julian\\2021\\43. API Controller Blazor Webassembly\\Project\\tutorial\\CoffeePicker\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\iulianoana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.org/api/v2": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+﻿@page "/dashboard"
+@inject HttpClient HttpClient
+@using CoffeePicker.Shared
+
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+        <div class="row">
+            <div class="col"><h3>Coffees</h3></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            @if (Coffees.Any())
+            {
+                @foreach (var coffee in Coffees)
+                {
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 mh-25 mb-4">
+                        <div class="card @(SelectedCoffee?.Id == coffee.Id ? "bg-light" : "")">
+                            <div class="card-body">
+                                <h5 class="card-title">#@coffee.Id @coffee.Title</h5>
+                                <p class="card-text">@coffee.Description.Substring(0, 80) ...</p>
+                                <a href="/dashboard" @onclick="() => GetDetails(coffee.Id)">More...</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No coffees available</p>
+            }
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        @if (SelectedCoffee is not null)
+        {
+            <h3>@SelectedCoffee.Title</h3>
+            <p>@SelectedCoffee.Description</p>
+        }
+        else
+        {
+            <p>No coffee selected</p>
+        }
+    </div>
+</div>
+
+@code {
+    private List<Coffee> Coffees = new();
+    private Coffee SelectedCoffee;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Coffees = await GetCoffees();
+    }
+
+    async Task GetDetails(int id)
+    {
+        SelectedCoffee = new();
+        SelectedCoffee = await HttpClient.GetFromJsonAsync<Coffee>($"Coffee/{id}");
+    }
+
+    async Task<List<Coffee>> GetCoffees()
+    {
+        return await HttpClient.GetFromJsonAsync<List<Coffee>>("Coffee/List");
+    }
+
+}
